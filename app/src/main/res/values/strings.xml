@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TrainApp</string>
+    <string name="title_home">Search</string>
+    <string name="title_dashboard">Stations</string>
+    <string name="title_notifications">User</string>
+    <string name="spinnerSearchFrom">From</string>
+    <string name="spinnerSearchTo">To</string>
+    <string name="spinnerSearchDay">Day</string>
+    <string name="buttonSearchSearch">Search</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textPassword">Password</string>
+    <string name="textUsername">Username</string>
+    <string name="textRepeatPassword">Repeat password</string>
+    <string name="textName">Name</string>
+    <string name="textDateofBirth">Birthdate: "yyyy-MM-dd"</string>
+    <string name="textSignUp">Sign Up</string>
+    <string name="textLogin">Login</string>
+    <string name="textSurname">Surname</string>
+    <string name="textLogOut">Log Out</string>
+    <string name="textBirth">Date of Birth</string>
+    <string name="textMyTickets">My Tickets</string>
+    <string name="textSelectStation">Select a Station</string>
+    <string name="textTrain">Train</string>
+    <string name="textDeparture">Departure</string>
+    <string name="textTime">Time</string>
+    <string name="textPassenger">Passenger:</string>
+    <string name="textArrive">Arrive</string>
+
+
+</resources>
