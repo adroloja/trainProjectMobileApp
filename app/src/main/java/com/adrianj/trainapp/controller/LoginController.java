@@ -69,10 +69,25 @@ public class LoginController {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Log.d("hola", error.toString()  );
+               // Log.d("hola", error.toString()  );
                 if (error.networkResponse != null && error.networkResponse.data != null) {
                     String body = new String(error.networkResponse.data);
-                    Toast.makeText(context, body, Toast.LENGTH_SHORT).show();
+                    JSONObject bodyJson;
+                    try {
+                        bodyJson = new JSONObject(body);
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                    if(bodyJson != null){
+
+                        try {
+                            Toast.makeText(context, bodyJson.getString("message"), Toast.LENGTH_SHORT).show();
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+
                 }
 
             }
