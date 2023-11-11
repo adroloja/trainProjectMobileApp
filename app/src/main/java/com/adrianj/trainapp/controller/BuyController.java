@@ -14,6 +14,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -48,7 +49,13 @@ public class BuyController {
 
                         if (error.networkResponse != null && error.networkResponse.data != null) {
                             String body = new String(error.networkResponse.data);
-                            Toast.makeText(context, body, Toast.LENGTH_SHORT).show();
+                            try {
+                                JSONObject jsonObject1 = new JSONObject(body);
+                                Toast.makeText(context, jsonObject1.getString("message"), Toast.LENGTH_SHORT).show();
+                            } catch (JSONException e) {
+                                throw new RuntimeException(e);
+                            }
+
                         }
                     }
                 }
